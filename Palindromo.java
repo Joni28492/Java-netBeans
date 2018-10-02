@@ -1,3 +1,13 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Alumno36
+ */
 import java.util.Scanner;
 
 public class Palindromo {
@@ -6,16 +16,16 @@ public class Palindromo {
      * @param args the command line arguments
      */
     
-    public static int palindromo(char cadena[]){
+    public static boolean palindromo(char cadena[]){
         
-        for (int i = 0; i < cadena.length; i++) {
+        for (int i = 0; i < cadena.length/2; i++) {
             
             if(cadena[i]!=cadena[cadena.length-i-1]){
-                return 0;
+                return false;
             }
             
         }
-        return 1;
+        return true;
     }
     
     
@@ -33,7 +43,7 @@ public class Palindromo {
         cadena=palabra.toCharArray();
         
         
-        if(palindromo(cadena)==1){
+        if(palindromo(cadena)){
             System.out.println("Es palindromo");
         
         }
